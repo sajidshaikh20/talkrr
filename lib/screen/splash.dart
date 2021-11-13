@@ -23,7 +23,10 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Talkrr"),
+        child: Text(
+          "Talkrr",
+          style: TextStyle(fontSize: 24),
+        ),
       ),
     );
   }
