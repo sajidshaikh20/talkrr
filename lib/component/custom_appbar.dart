@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:talkrr/screen/profile.dart';
 import 'package:talkrr/utils/common/const.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -11,7 +14,7 @@ class CustomAppBar extends StatelessWidget {
       child: AppBar(
         bottomOpacity: 0.0,
         elevation: 0.0,
-        backgroundColor: Colors.amber[50],
+        // backgroundColor: Colors.amber[50],
         leading: const Icon(CupertinoIcons.search, size: 30),
         actions: [
           SizedBox(
@@ -76,11 +79,20 @@ class CustomAppBar extends StatelessWidget {
               ),
             ),
           ),
-          const CircleAvatar(
-            backgroundImage: NetworkImage(
-              profileURL,
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ProfilePage()));
+            },
+            child: const Hero(
+              tag: "profileimg",
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(
+                  profileURL,
+                ),
+                radius: 20,
+              ),
             ),
-            radius: 20,
           ),
           const SizedBox(
             width: 12,
