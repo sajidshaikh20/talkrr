@@ -25,7 +25,7 @@ class _SplashState extends State<Splash> {
       body: Center(
         child: Text(
           "Talkrr",
-          style: TextStyle(fontSize: 24),
+          style: TextStyle(fontSize: 30, color: Colors.green),
         ),
       ),
     );
