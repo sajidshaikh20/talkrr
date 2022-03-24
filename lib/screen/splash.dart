@@ -11,7 +11,7 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(milliseconds: 500), () {
       //your code will run after given seconds
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const Home()));
